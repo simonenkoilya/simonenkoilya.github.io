@@ -1,0 +1,185 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #08152b; /* Old browsers */
+    background: -moz-linear-gradient(left, #08152b 0%, #233866 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #08152b 0%, #233866 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #08152b 0%, #233866 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08152b', endColorstr='#233866', GradientType=1); /* IE6-9 */
+    color: #fff;
+    padding-left: 10px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 0px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+}
+
+nav a:hover,
+nav a:focus {
+    outline: none;
+}
+
+/* Effect 1: Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+    /*margin-right: 10px;*/
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    /*margin-left: 10px;*/
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+/* Effect 2: Commented out */
+.cl-effect-2 a {
+    color: #788299;
+}
+
+.cl-effect-2 a::before,
+.cl-effect-2 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-2 a::before {
+    margin-left: -10px;
+    content: '/*';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-2 a::after {
+    margin-right: -10px;
+    content: '*/';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.cl-effect-2 a:hover::before,
+.cl-effect-2 a:hover::after,
+.cl-effect-2 a:focus::before,
+.cl-effect-2 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.header {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 82px;
+    margin-top: 1.2em;
+}
+
+.info {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    color: #ffa500;
+}
+
+.star {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 400px;
+    height: 400px;
+    background-image: url(../images/fomalhaut.png);
+    background-size: 400px;
+}
+
+.star * {
+    vertical-align: middle;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                             not supported by any browser */
+    user-drag: none;
+    -ms-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-user-drag: none;
+}
+
+pre {
+    overflow-x: hidden;
+}
+code {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+}
+code:after {
+    content: "█";
+    -webkit-animation: blink 400ms linear infinite alternate;
+    animation: blink 400ms linear infinite alternate;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
