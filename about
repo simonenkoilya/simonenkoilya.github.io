@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
+        <title>simonenkoilya.github.io</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200">
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="cl-effect-1">
+            <a href="">Home</a>
+            <a href="https://vk.com/simonenkoilya">VK</a>
+            <a href="https://t.me/simonenkoilya">Telegram</a>
+            <a href="https://steamcommunity.com/id/simonenkoilya">Steam</a>
+            <a href="https://github.com/simonenkoilya">GitHub</a>
+            <a href="https://gitlab.com/simonenkoilya">GitLab</a>
+        </nav>
+        <div class="header">[ simonenkoilya ]</div>
+        <div class="info">// About me</div>
+        <div class="info">// Powered by GitHub Pages</div>
+        <div class="info">// (c) 2021 Ilya Simonenko</div>
+    </body>
+</html>
