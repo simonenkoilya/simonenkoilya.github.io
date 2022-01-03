@@ -1,6 +1,6 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-html { font-family: 'Inter', sans-serif; }
+html { font-family: 'Ubuntu', sans-serif; }
 
 body {
     margin: 0;
