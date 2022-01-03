@@ -1,47 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
-html { font-family: 'Inter', sans-serif; }
+html {
+    font-family: "Noto Sans", sans-serif;
+}
 
 body {
     margin: 0;
+    background-color: black;
+    color: white;
 }
 
-.absolute-center {
+.content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 .content {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    max-width: 500px;
-    margin: auto;
     text-align: center;
+    max-width: 500px;
     padding: 10px;
 }
 
-socials a {
+.links a {
     text-decoration: none;
     padding-right: 5px;
     opacity: 0.5;
     transition: 0.3s;
     cursor: pointer;
+    filter: invert();
 }
 
-socials a:hover {
+.links a:hover {
     opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-    body.dark {
-        background-color: black;
-        color: white;
-    }
+a {
+    color: #2E86C1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    socials a.dark {
-        filter: invert();
-    }
+a:hover {
+    color: #1F618D;
 }
