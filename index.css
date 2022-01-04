@@ -37,6 +37,11 @@ body {
     opacity: 1;
 }
 
+.footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
 a {
     color: #2E86C1;
     text-decoration: none;
