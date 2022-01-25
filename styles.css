@@ -1,0 +1,37 @@
+body {
+font-family: 'Noto Sans', sans-serif;
+}
+h1 {
+color:rgb(255, 255, 255);
+font-weight: lighter;
+background-color: dodgerblue;
+text-align:center;
+}
+h3 {
+background-color:tomato;
+text-align:center;
+}
+p {
+color:white;
+background-color: mediumseagreen
+}
+ul {
+border:2px solid Violet;
+color:white
+}
+#lox {
+color:rgba(0, 0, 0, 0);
+background-color: rgba(0, 0, 0, 0);
+}
+a {
+color:white
+}
+#funny {
+background-color:mediumpurple;
+text-align: center;
+}
+#clock {
+background-color: rgba(0, 0, 0, 0);
+text-align: center;
+color:tomato;
+}
