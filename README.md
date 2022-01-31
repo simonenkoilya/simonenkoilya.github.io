@@ -1,6 +1,6 @@
 # simonenkoilya.github.io
 The official website of the Ilya Simonenko  
-Latest version: v1.4.1 (January 31 2022)  
+Latest version: v1.4.2 (January 31 2022)  
 
 # Changelog
 v1.4.2 - Hotfix  
