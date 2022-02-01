@@ -1,6 +1,6 @@
 # 1.4.5 (2022-02-01)
 
-Добавлены **CHANGELOG_ru.md** и **CHANGELOG_en.md** в репозиторий GitHub.
+Добавлены файлы **CHANGELOG_ru.md** и **CHANGELOG_en.md** в репозиторий GitHub.
 
 
 # 1.4.4 (2022-01-31)
