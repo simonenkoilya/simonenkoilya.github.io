@@ -3,7 +3,7 @@
 
 ### Features
 
-Added **CHANGELOG_ru.md** and **CHANGELOG_en.md** files to the GitHub repository.
+* Added **CHANGELOG_ru.md** and **CHANGELOG_en.md** files to the GitHub repository.
 
 
 
