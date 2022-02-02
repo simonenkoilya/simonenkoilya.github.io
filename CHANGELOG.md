@@ -46,7 +46,7 @@
 ## 1.4.0 (2022-01-27)
 
 
-# Features
+### Features
 
 * A hand emoji has been added instead of a Clippy.
 * Welcome message changed.
