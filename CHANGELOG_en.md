@@ -1,6 +1,10 @@
 # 1.4.5 (2022-02-01)
 
+
+### Features
+
 Added **CHANGELOG_ru.md** and **CHANGELOG_en.md** files to the GitHub repository.
+
 
 
 # 1.4.4 (2022-01-31)
