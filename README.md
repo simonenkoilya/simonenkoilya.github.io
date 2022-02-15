@@ -1,7 +1,7 @@
 # simonenkoilya.github.io
 The official website of the Ilya Simonenko on HTML/CSS  
 
-Current version: **1.4.8 (2022-02-09)**  
+Current version: **1.4.9 (2022-02-15)**  
 Current pre-release: **1.5.0-pre (2022-02-09)**  
 
 ### Changelogs
