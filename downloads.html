@@ -1,0 +1,2120 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OptiFine Downloads</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href='images/of16r.png' />
+    <meta name="description" content="OptiFine - Minecraft performance tuning and advanced graphics" />
+    <meta name="keywords" content="optifine, minecraft, fps, lag, antialiasing, hd textures" />
+<style type="text/css">
+      @font-face {
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-style: normal;
+        src: local('Roboto'), local('Roboto-Regular'), url('template/fonts/Roboto-Regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-style: normal;
+        src: url('template/fonts/Roboto-Bold.woff') format('woff');
+        src: local('Roboto Bold'), local('Roboto-Bold'), url('template/fonts/Roboto-Bold.woff') format('woff');        
+      }
+      @font-face {
+        font-family: 'Oswald';
+        font-weight: normal;
+        font-style: normal;
+        src: url('template/fonts/Oswald-Regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Oswald';
+        font-weight: bold;
+        font-style: normal;
+        src: url('template/fonts/Oswald-Medium.woff') format('woff');
+      }
+      body {
+        font-family:'Roboto', arial, helvetica, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: medium;
+        background-image:url('images/snow64b.gif');
+      }
+      A {
+        color: #5168CF; 
+        text-decoration: none; 
+      }    
+      h2 {
+        margin-bottom: 0.3em
+      }
+      .tableRoot {
+        margin: 0 auto; 
+        min-width: 850px; 
+        background-color: white; 
+        box-shadow: 0px 0px 20px #CCCCCC;
+        border: 0px solid #808080;
+        /* Use border-spacing instead of border-collapse, otherwise IE doesn't show the shadow */
+        border-spacing:0;
+      }
+      .header {
+        background-color: #313E7C;
+        padding-bottom: 0.32em;
+      }
+      .headerTitle {
+        font-family:'Oswald', arial, helvetica, sans-serif;
+        font-size:300%; 
+        font-weight:bold; 
+        padding-left: 20px;
+        padding-right: 40px;
+        line-height: 1.3em;
+      }
+      .headerTitle A {
+        color: #F0F3FF; 
+        text-decoration: none;
+      }
+      .headerNav {
+        text-align: left; 
+        background-color: #313E7C;
+        border-width: 0px;
+        margin-left: 30px
+      }
+      .headerNav A {
+        color: #F0F3FF; 
+        text-decoration: none;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+      }
+      .headerNav A:hover {
+        background-color: #6974A3;
+        transition: .25s;
+        text-decoration: none;
+      }
+      .content {
+        padding: 18px;
+        padding-top: 10px; 
+        text-align: left; 
+        text-indent: 0px; 
+        margin: 10px;
+      }
+      .content A:hover {
+      }
+      .footer {
+        font-size:small; 
+        text-align: right;  
+        background-color: #313E7C; 
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      .footerIcon {
+      }
+      .footerIcon IMG {
+        margin-bottom: -0.3em;
+        margin-right: 0.7em;
+        width: 1.2em;
+        height: 1.2em;
+      }
+      .footerText A {
+        text-decoration: none;
+        padding-left: 0.7em; 
+        padding-right: 0.7em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        color: #F0F3FF;
+      }
+      .footerText A:hover {
+        text-decoration: none;
+        background-color: #6974A3;
+        transition: .25s;
+        color: #F0F3FF;
+      }
+      .downloads {
+        width: 100%
+      }
+      .spoilerLink {
+        line-height: 200%;
+      }
+      .showAll {
+        text-align: center;
+        margin-top: 2em;
+      }
+      .downloadTable {
+        border-collapse: collapse;
+        width: auto;
+        line-height: 200%;
+      }
+      .downloadLine {
+      }
+      /* Columns */
+      .downloadLine .colFile {
+        width: 270px;
+        padding-left: 10px;
+      }
+      .downloadLine .colDownload A,
+      .downloadButton A {
+        width: 80px;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        border: 1px solid #5168CF;
+      }
+      .downloadLine .colMirror {
+        width: 100px; 
+        text-align: center;
+      }
+      .downloadLine .colChangelog {
+        width: 110px;
+      }
+      .downloadLine .colForge {
+        width: 115px;
+      }
+      .downloadLine .colDate {
+        width: 80px;
+        text-align: right;
+        padding-right: 10px;
+      }
+      /* Preview */
+      .downloadLinePreview {
+        background-color: #FFF6E3
+      }
+      /* Main */
+      .downloadLineMain:first-child {
+        background-color: #F0F3FF
+      }
+      .downloadLineMain:first-child .colDownload  A, 
+      .downloadButton A{
+        font-weight: normal;
+        color: white;
+        background-color: #313E7C;
+        border: 1px solid #313E7C;
+      }
+      .downloadLineMain:first-child .colDownload A:hover,
+      .downloadButton A:hover{
+        background-color: #6974A3;
+        transition: .25s;
+      }
+      LI STRONG {
+        line-height: 200%;
+      }
+      .tableDownload {
+        margin: 0 auto; 
+      }
+      .tableDonate TR {
+        height: 35px;
+      }
+      .scaleNearest {  
+        image-rendering:optimizeSpeed;             /* Legal fallback                 */
+        image-rendering:-moz-crisp-edges;          /* Firefox                        */
+        image-rendering:-o-crisp-edges;            /* Opera                          */
+        image-rendering:-webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+        image-rendering:optimize-contrast;         /* CSS3 Proposed                  */
+        -ms-interpolation-mode:nearest-neighbor;   /* IE8+                           */
+        image-rendering:pixelated;                 /* Chrome 41+, Firefox            */
+      }
+      .tableData {
+        border-collapse: collapse;
+      }
+      .tableData th {
+        color: #F0F3FF;
+        background-color: #313E7C;
+        font-weight: normal;
+      }
+      .tableData, .tableData th, .tableData td {
+        border: 0px solid black;
+      }
+      .tableData th, .tableData td {
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:5px;
+        padding-bottom:5px;
+      }
+      .tableDataDis {
+        background-color: #DCDCDC
+      }
+      .tableDataIcon {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      .tableDataCape {
+        max-height: 44px;
+      }
+      .tableDataCentered {
+        text-align: center;
+      }
+      TD .tableDataEditable {
+        background-color: #FFF6E3;
+        border: 2px solid transparent;
+      }
+      input,
+      select {
+        font-family:'Roboto', arial, helvetica, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: medium;
+        padding: 2px;
+      }
+      input[type=submit] {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+      }
+      input[type=checkbox] {
+        transform : scale(1.3);
+      }
+    </style>
+</head>
+  <body>
+    <table class="tableRoot">
+      <tr>
+        <td class="header">
+          <!-- Title -->
+          <span class="headerTitle">
+            <a href="home">OptiFine</a>
+          </span>
+          <!-- Navigation -->
+          <span class="headerNav">
+            <a href="home">Home</a>
+            <a href="downloads">Downloads</a>
+            <a href="donate">Donate</a>
+            <a href="cape">Cape</a>
+            <a href="login">Login</a>
+            <a href="faq">FAQ</a>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td class="content">
+          <!-- Content -->
+<span class="downloads">
+          <script type='text/javascript'>
+            function showSpoiler(elemId, linkId, hideLink)
+            {
+              var elem = document.getElementById(elemId);
+              var link = document.getElementById(linkId);
+              if (elem.style.position == 'absolute')
+              {
+                elem.style.position = 'static';
+                elem.style.visibility = 'visible';
+                elem.style.opacity = '1';
+                link.innerHTML = link.innerHTML.replace("+", "-");
+              }
+              else
+              {
+                elem.style.position = 'absolute';
+                elem.style.visibility = 'hidden';
+                elem.style.opacity = '0';
+                link.innerHTML = link.innerHTML.replace("-", "+");
+              }
+              if(hideLink)
+                link.innerHTML = ("");
+            }
+          </script>
+          
+          <h2>Minecraft 1.18.1</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link-500268273" href="javascript:showSpoiler('preview-500268273', 'link-500268273');">+ Preview versions</a>
+                <div id="preview-500268273" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U H5 pre5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.18.1_HD_U_H5_pre5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.18.1_HD_U_H5_pre5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.18.1_HD_U_H5_pre5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 39.0.66</td>
+                        <td class='colDate'>08.02.2022</td>
+                      </tr>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U H5 pre4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.18.1_HD_U_H5_pre4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.18.1_HD_U_H5_pre4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.18.1_HD_U_H5_pre4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 39.0.0</td>
+                        <td class='colDate'>21.12.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U H4</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.18.1_HD_U_H4.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.18.1_HD_U_H4.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.18.1_HD_U_H4.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 39.0.0</td>
+                    <td class='colDate'>12.12.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <p class="showAll">
+                <a class="showAll" id="link1545049655" href="javascript:showSpoiler('all1545049655', 'link1545049655', 'true');">Show all versions</a>
+              </p>
+              <div id="all1545049655" style='position: absolute; bottom: 100px; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+            <h2>Minecraft 1.18</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link1439612986" href="javascript:showSpoiler('preview1439612986', 'link1439612986');">+ Preview versions</a>
+                <div id="preview1439612986" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U H3 pre7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.18_HD_U_H3_pre7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.18_HD_U_H3_pre7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.18_HD_U_H3_pre7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 38.0.14</td>
+                        <td class='colDate'>04.12.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U H3</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.18_HD_U_H3.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.18_HD_U_H3.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.18_HD_U_H3.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 38.0.14</td>
+                    <td class='colDate'>06.12.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.17.1</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link112376529" href="javascript:showSpoiler('preview112376529', 'link112376529');">+ Preview versions</a>
+                <div id="preview112376529" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U H2 pre1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.17.1_HD_U_H2_pre1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.17.1_HD_U_H2_pre1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.17.1_HD_U_H2_pre1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 37.0.103</td>
+                        <td class='colDate'>04.11.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U H1</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.17.1_HD_U_H1.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.17.1_HD_U_H1.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.17.1_HD_U_H1.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 37.0.103</td>
+                    <td class='colDate'>03.11.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1780848044" href="javascript:showSpoiler('more1780848044', 'link1780848044', 'true');">+ More</a>
+                <div id="more1780848044" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G9</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.17.1_HD_U_G9.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.17.1_HD_U_G9.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.17.1_HD_U_G9.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>30.08.2021</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.17</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link2055988352" href="javascript:showSpoiler('preview2055988352', 'link2055988352');">+ Preview versions</a>
+                <div id="preview2055988352" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U G9 pre26</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.17_HD_U_G9_pre26.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.17_HD_U_G9_pre26.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.17_HD_U_G9_pre26.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>09.07.2021</td>
+                      </tr>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U G9 pre25</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.17_HD_U_G9_pre25.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.17_HD_U_G9_pre25.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.17_HD_U_G9_pre25.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>06.07.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.16.5</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G8</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G8.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G8.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.5_HD_U_G8.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 36.1.0</td>
+                    <td class='colDate'>15.05.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-1592838300" href="javascript:showSpoiler('more-1592838300', 'link-1592838300', 'true');">+ More</a>
+                <div id="more-1592838300" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.5_HD_U_G7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 36.0.42</td>
+                        <td class='colDate'>04.03.2021</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.5_HD_U_G6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.5_HD_U_G6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 36.0.0</td>
+                        <td class='colDate'>16.01.2021</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.16.4</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G7</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G7.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G7.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.4_HD_U_G7.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 35.1.37</td>
+                    <td class='colDate'>20.02.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-1698734343" href="javascript:showSpoiler('more-1698734343', 'link-1698734343', 'true');">+ More</a>
+                <div id="more-1698734343" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.4_HD_U_G6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 35.1.36</td>
+                        <td class='colDate'>16.01.2021</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.4_HD_U_G5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.4_HD_U_G5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 35.0.1</td>
+                        <td class='colDate'>06.11.2020</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.16.3</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.3_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 34.1.42</td>
+                    <td class='colDate'>06.11.2020</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-1530384412" href="javascript:showSpoiler('more-1530384412', 'link-1530384412', 'true');">+ More</a>
+                <div id="more-1530384412" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.3_HD_U_G4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 34.0.0</td>
+                        <td class='colDate'>02.11.2020</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.3_HD_U_G3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.3_HD_U_G3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 34.0.0</td>
+                        <td class='colDate'>16.09.2020</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.16.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.2_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.2_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.2_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 33.0.61</td>
+                    <td class='colDate'>06.11.2020</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1984613910" href="javascript:showSpoiler('more1984613910', 'link1984613910', 'true');">+ More</a>
+                <div id="more1984613910" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U G3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.2_HD_U_G3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.2_HD_U_G3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.2_HD_U_G3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 33.0.20</td>
+                        <td class='colDate'>29.08.2020</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.16.1</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G2</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.16.1_HD_U_G2.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.16.1_HD_U_G2.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.16.1_HD_U_G2.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 32.0.98</td>
+                    <td class='colDate'>01.08.2020</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.15.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G6</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.15.2_HD_U_G6.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.15.2_HD_U_G6.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.15.2_HD_U_G6.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 31.2.45</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.14.4</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.4_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge 28.2.23</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1043498674" href="javascript:showSpoiler('more1043498674', 'link1043498674', 'true');">+ More</a>
+                <div id="more1043498674" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.4_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 28.1.56</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.4_HD_U_F4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge 28.1.56</td>
+                        <td class='colDate'>25.10.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.4_HD_U_F3.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>06.08.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.4_HD_U_F2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.4_HD_U_F2.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>25.07.2019</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.14.3</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U F2</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.3_HD_U_F2.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.3_HD_U_F2.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.3_HD_U_F2.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>20.07.2019</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link737961890" href="javascript:showSpoiler('more737961890', 'link737961890', 'true');">+ More</a>
+                <div id="more737961890" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.3_HD_U_F1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.3_HD_U_F1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.3_HD_U_F1.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>28.06.2019</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.14.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U F1</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.14.2_HD_U_F1.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.14.2_HD_U_F1.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.14.2_HD_U_F1.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.13.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1665651136" href="javascript:showSpoiler('more1665651136', 'link1665651136', 'true');">+ More</a>
+                <div id="more1665651136" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>22.03.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_E6.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>14.02.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_E5.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>21.12.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.2_HD_U_E4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.2_HD_U_E4.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>25.10.2018</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.13.1</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U E4</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.1_HD_U_E4.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.1_HD_U_E4.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.1_HD_U_E4.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>25.10.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1442966318" href="javascript:showSpoiler('more1442966318', 'link1442966318', 'true');">+ More</a>
+                <div id="more1442966318" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13.1_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13.1_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.13.1_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>18.10.2018</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.13</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U E4</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.13_HD_U_E4.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.13_HD_U_E4.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.13_HD_U_E4.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>25.10.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <h2>Minecraft 1.12.2</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link701967145" href="javascript:showSpoiler('preview701967145', 'link701967145');">+ Preview versions</a>
+                <div id="preview701967145" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U G6 pre1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2847</td>
+                        <td class='colDate'>23.03.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2847</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-199072502" href="javascript:showSpoiler('more-199072502', 'link-199072502', 'true');">+ More</a>
+                <div id="more-199072502" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2847</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_F4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_F4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_F4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2847</td>
+                        <td class='colDate'>23.10.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2795</td>
+                        <td class='colDate'>10.12.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_E2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2729</td>
+                        <td class='colDate'>28.07.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_E1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_E1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2712</td>
+                        <td class='colDate'>28.06.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_D3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2691</td>
+                        <td class='colDate'>15.05.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_D2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2673</td>
+                        <td class='colDate'>30.04.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_D1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_D1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2627</td>
+                        <td class='colDate'>23.03.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C9</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C9.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C9.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_C9.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2615</td>
+                        <td class='colDate'>14.02.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_C8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2587</td>
+                        <td class='colDate'>10.01.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_C7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2555</td>
+                        <td class='colDate'>13.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_C6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2493</td>
+                        <td class='colDate'>03.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_C5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.2_HD_U_C5.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>22.09.2017</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.12.1</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.1_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2485</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-1253642551" href="javascript:showSpoiler('more-1253642551', 'link-1253642551', 'true');">+ More</a>
+                <div id="more-1253642551" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.1_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2485</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.1_HD_U_C7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2485</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.1_HD_U_C6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2485</td>
+                        <td class='colDate'>03.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12.1_HD_U_C5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12.1_HD_U_C5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2446</td>
+                        <td class='colDate'>07.08.2017</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.12</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2443</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1896016225" href="javascript:showSpoiler('more1896016225', 'link1896016225', 'true');">+ More</a>
+                <div id="more1896016225" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2443</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_C7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2443</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_C5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2424</td>
+                        <td class='colDate'>07.08.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_C4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2387</td>
+                        <td class='colDate'>03.07.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_C3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2331</td>
+                        <td class='colDate'>26.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.12_HD_U_C2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.12_HD_U_C2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2331</td>
+                        <td class='colDate'>18.06.2017</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.11.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2588</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-243116946" href="javascript:showSpoiler('more-243116946', 'link-243116946', 'true');">+ More</a>
+                <div id="more-243116946" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2588</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_C7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2530</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_C3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2366</td>
+                        <td class='colDate'>27.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_C2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2311</td>
+                        <td class='colDate'>13.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_C1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_C1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2311</td>
+                        <td class='colDate'>02.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B9</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B9.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B9.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_B9.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2298</td>
+                        <td class='colDate'>18.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_B8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2294</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_B7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2227</td>
+                        <td class='colDate'>09.02.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_B6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2214</td>
+                        <td class='colDate'>12.01.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11.2_HD_U_B5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11.2_HD_U_B5.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>22.12.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.11</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U G5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_G5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_G5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_G5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2199</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link402168466" href="javascript:showSpoiler('more402168466', 'link402168466', 'true');">+ More</a>
+                <div id="more402168466" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_F5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_F5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_F5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_C7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_C7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_C7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_C3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_C3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_C3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>27.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2199</td>
+                        <td class='colDate'>12.01.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2198</td>
+                        <td class='colDate'>22.12.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2188</td>
+                        <td class='colDate'>19.12.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2157</td>
+                        <td class='colDate'>01.12.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.11_HD_U_B1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.11_HD_U_B1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2157</td>
+                        <td class='colDate'>24.11.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.10.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_I5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_I5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_I5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2511</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1437139269" href="javascript:showSpoiler('more1437139269', 'link1437139269', 'true');">+ More</a>
+                <div id="more1437139269" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2511</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2511</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2316</td>
+                        <td class='colDate'>29.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2221</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2221</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2209</td>
+                        <td class='colDate'>12.01.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2151</td>
+                        <td class='colDate'>24.11.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2125</td>
+                        <td class='colDate'>16.11.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2099</td>
+                        <td class='colDate'>28.10.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_D1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_D1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2099</td>
+                        <td class='colDate'>17.10.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_C3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2073</td>
+                        <td class='colDate'>25.08.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_C2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2002</td>
+                        <td class='colDate'>06.07.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10.2_HD_U_C1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10.2_HD_U_C1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2002</td>
+                        <td class='colDate'>30.06.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.10</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_I5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_I5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_I5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2000</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link523655888" href="javascript:showSpoiler('more523655888', 'link523655888', 'true');">+ More</a>
+                <div id="more523655888" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>29.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U C1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_C1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_C1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_C1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2000</td>
+                        <td class='colDate'>30.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_B7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_B7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_B7.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>24.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_B6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.10_HD_U_B6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.10_HD_U_B6.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>15.06.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.9.4</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_I5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_I5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_I5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #2051</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1643292868" href="javascript:showSpoiler('more1643292868', 'link1643292868', 'true');">+ More</a>
+                <div id="more1643292868" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2051</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2051</td>
+                        <td class='colDate'>28.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2051</td>
+                        <td class='colDate'>29.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2051</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #2051</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_B6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1987</td>
+                        <td class='colDate'>30.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_B5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1937</td>
+                        <td class='colDate'>07.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.4_HD_U_B4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.4_HD_U_B4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1909</td>
+                        <td class='colDate'>19.05.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.9.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U E3</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_E3.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_E3.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_E3.jar'>Changelog</a></td>
+                    <td class='colForge'></td>
+                    <td class='colDate'>29.06.2017</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-752244147" href="javascript:showSpoiler('more-752244147', 'link-752244147', 'true');">+ More</a>
+                <div id="more-752244147" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>16.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_B3.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>13.05.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_B2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1863</td>
+                        <td class='colDate'>27.04.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.2_HD_U_B1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.2_HD_U_B1.jar'>Changelog</a></td>
+                        <td class='colForge'></td>
+                        <td class='colDate'>02.04.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.9.0</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_I5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_I5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_I5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1938</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1771228615" href="javascript:showSpoiler('more1771228615', 'link1771228615', 'true');">+ More</a>
+                <div id="more1771228615" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1938</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1938</td>
+                        <td class='colDate'>29.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1938</td>
+                        <td class='colDate'>29.06.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1938</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1938</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_B5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1907</td>
+                        <td class='colDate'>07.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_B3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1867</td>
+                        <td class='colDate'>13.05.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_B2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1863</td>
+                        <td class='colDate'>27.04.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U B1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.9.0_HD_U_B1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.9.0_HD_U_B1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1797</td>
+                        <td class='colDate'>26.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.8.9</h2>
+            <!-- Previews -->
+              <a class="spoilerLink" id="link1442966232" href="javascript:showSpoiler('preview1442966232', 'link1442966232');">+ Preview versions</a>
+                <div id="preview1442966232" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U M6 pre2</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre2.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre2.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.8.9_HD_U_M6_pre2.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>01.11.2021</td>
+                      </tr>
+                    <tr class='downloadLine downloadLinePreview'>
+                        <td class='colFile'>OptiFine HD U M6 pre1</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>26.03.2021</td>
+                      </tr>
+                    </table>
+                </div>
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U M5</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_M5.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1902</td>
+                    <td class='colDate'>24.01.2021</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link1302336767" href="javascript:showSpoiler('more1302336767', 'link1302336767', 'true');">+ More</a>
+                <div id="more1302336767" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U L5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_L5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_L5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_L5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>04.12.2019</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U I7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_I7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_I7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_I7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>04.04.2018</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U I3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_I3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_I3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_I3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>26.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_H8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_H7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_H6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>07.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.9_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1764</td>
+                        <td class='colDate'>20.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.8.8</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I7</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_I7.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_I7.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_I7.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1655</td>
+                    <td class='colDate'>04.04.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-1487278280" href="javascript:showSpoiler('more-1487278280', 'link-1487278280', 'true');">+ More</a>
+                <div id="more-1487278280" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U I3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_I3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_I3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_I3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1902</td>
+                        <td class='colDate'>26.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_H8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1655</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_H7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1655</td>
+                        <td class='colDate'>15.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_H6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1655</td>
+                        <td class='colDate'>07.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.8_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.8_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1655</td>
+                        <td class='colDate'>20.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.8.0</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U I7</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_I7.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_I7.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_I7.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1577</td>
+                    <td class='colDate'>04.04.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link-817058050" href="javascript:showSpoiler('more-817058050', 'link-817058050', 'true');">+ More</a>
+                <div id="more-817058050" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U I3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_I3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_I3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_I3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1577</td>
+                        <td class='colDate'>26.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_H8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1577</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_H7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1577</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_H6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1577</td>
+                        <td class='colDate'>07.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U H5</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H5.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.8.0_HD_U_H5.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.8.0_HD_U_H5.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1577</td>
+                        <td class='colDate'>20.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.7.10</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U E7</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_E7.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_E7.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_E7.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1614</td>
+                    <td class='colDate'>04.04.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link797808164" href="javascript:showSpoiler('more797808164', 'link797808164', 'true');">+ More</a>
+                <div id="more797808164" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>29.12.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_D8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_D7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>14.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D6</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D6.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D6.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_D6.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>29.06.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_D4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>28.04.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U D3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.10_HD_U_D3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.10_HD_U_D3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1614</td>
+                        <td class='colDate'>20.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <h2>Minecraft 1.7.2</h2>
+            <!-- Previews -->
+              <!-- Version -->
+              <table class='downloadTable mainTable'>
+                <tr class='downloadLine downloadLineMain'>
+                    <td class='colFile'>OptiFine HD U F7</td>
+                    <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_F7.jar&x=56b8">Download</a></td>
+                    <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_F7.jar">(Mirror)</a></td>
+                    <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_F7.jar'>Changelog</a></td>
+                    <td class='colForge'>Forge #1161</td>
+                    <td class='colDate'>04.04.2018</td>
+                  </tr>
+                </table>
+              
+              <!-- Old -->
+              <a class="spoilerLink" id="link468608382" href="javascript:showSpoiler('more468608382', 'link468608382', 'true');">+ More</a>
+                <div id="more468608382" style='position: absolute; visibility: hidden; opacity: 0; transition: opacity 0.5s;'>          
+                  <table class='downloadTable'>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U F3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_F3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_F3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_F3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1161</td>
+                        <td class='colDate'>26.10.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E8</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E8.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E8.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_E8.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1161</td>
+                        <td class='colDate'>04.05.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E7</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E7.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E7.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_E7.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1161</td>
+                        <td class='colDate'>16.03.2017</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E4</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E4.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E4.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_E4.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1161</td>
+                        <td class='colDate'>28.04.2016</td>
+                      </tr>
+                    <tr class='downloadLine downloadLineMore'>
+                        <td class='colFile'>OptiFine HD U E3</td>
+                        <td class='colDownload'><a href="http://adfoc.us/serve/sitelinks/?id=475250&url=http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E3.jar&x=56b8">Download</a></td>
+                        <td class='colMirror'><a href="http://optifine.net/adloadx?f=OptiFine_1.7.2_HD_U_E3.jar">(Mirror)</a></td>
+                        <td class='colChangelog'><a href='changelog?f=OptiFine_1.7.2_HD_U_E3.jar'>Changelog</a></td>
+                        <td class='colForge'>Forge #1161</td>
+                        <td class='colDate'>20.03.2016</td>
+                      </tr>
+                    </table>
+                </div>
+                <br>  
+              <br>
+          <br>
+          <span style='font-size:small'>
+          All files containing original or modifed Minecraft code and resources have been removed.<br>
+          Some popular 1.6 and 1.7 versions may be cleaned up later.<br>
+          </span>
+              </div>          
+    </span>
+
+    <!-- End of content -->
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <!-- Footer -->
+          <span class="footerIcon">
+            <a href="https://discord.gg/3mMpcwW" target="_blank"><img alt="Discord" src="images/discord.png"></a>
+            <a href="https://twitter.com/OptiFineNews" target="_blank"><img alt="Twitter" src="images/twitter.png"></a>
+            <a href="https://reddit.com/r/optifine" target="_blank"><img alt="Reddit" src="images/reddit.png"></a>
+          </span>
+          <span class="footerText">
+            <a href="privacy">Privacy</a>
+            <a href="refund">Refund</a>
+            <a href="copyright">Copyright</a>
+            <a href="contact">Contact</a>
+          </span>
+        </td>
+      </tr>
+      </table>
+</body>
+</html>
